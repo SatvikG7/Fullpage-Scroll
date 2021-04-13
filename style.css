@@ -23,6 +23,7 @@
 }
 #page-4 {
     background-color: #fca311;
+    overflow: scroll;
 }
 
 /* Navigation */
@@ -32,12 +33,10 @@
   right: 0;
   color: darkslategrey;
   margin-right: 50px;
+  z-index: 10;
 }
 .navigation > div {
   display: inline;
-}
-.navigation > div:hover {
-  color: rgb(40, 54, 54);
 }
 .currentPage {
   display: inline;

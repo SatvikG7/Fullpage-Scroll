@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.page {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+#page-1 {
+  background-color: dodgerblue;
+}
+#page-2 {
+  background-color: #e76f51;
+}
+#page-3 {
+  background-color: #06d6a0;
+}
+#page-4 {
+    background-color: #fca311;
+}
+
+/* Navigation */
+.navigation-wrapper {
+  position: fixed;
+  top: 30%;
+  right: 0;
+  color: darkslategrey;
+  margin-right: 50px;
+}
+.navigation > div {
+  display: inline;
+}
+.navigation > div:hover {
+  color: rgb(40, 54, 54);
+}
+.currentPage {
+  display: inline;
+  margin: 20px 15px;
+  font-size: 30px;
+}
+@media screen and (max-width: 900px) {
+  .navigation-wrapper {
+    position: fixed;
+    top: auto;
+    bottom: 10px;
+    left: 40%;
+    color: darkslategrey;
+    display: flex;
+    flex-direction: row;
+  }
+  .currentPage {
+    display: inline;
+    margin: 0px 15px 10px 15px;
+    font-size: 30px;
+  }
+}

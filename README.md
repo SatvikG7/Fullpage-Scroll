@@ -1,15 +1,15 @@
-
 # Fullpage Scroll
 
 This is a Javascript code that makes pseudo SPAs in seconds
+
 ## Authors and Acknowledgement
 
 - [@SatvikG7](https://www.github.com/SatvikG7) for development and design
-  
+
 ## Demo
 
 Visit [Fullpage-Scroll](https://satvikg7.github.io/Fullpage-Scroll/)
-  
+
 ## Usage/Examples
 
 ```html
@@ -49,7 +49,7 @@ Visit [Fullpage-Scroll](https://satvikg7.github.io/Fullpage-Scroll/)
 	#page-n{
    	 	background-color: ...;
 	}
- 
+
     /* Navigation */
     .navigation-wrapper {
     color: rgba(15, 34, 136, 0.75);
@@ -126,7 +126,4 @@ Visit [Fullpage-Scroll](https://satvikg7.github.io/Fullpage-Scroll/)
 	<script src="https://cdn.jsdelivr.net/gh/SatvikG7/Fullpage-Scroll/script.js"></script>
 </body>
 </html>
-                    
 ```
-
-  

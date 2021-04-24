@@ -85,8 +85,7 @@ Visit [Fullpage-Scroll](https://satvikg7.github.io/Fullpage-Scroll/)
     bottom: 20px;
     z-index: 1;
     }
-
-	</style>
+    </style>
 </head>
 <body>
     <div class="page-container">
@@ -99,7 +98,7 @@ Visit [Fullpage-Scroll](https://satvikg7.github.io/Fullpage-Scroll/)
                 <i class="fas fa-arrow-alt-circle-down fa-3x"></i>
             </div>
         </div>
-<!--Edit Below-->
+        <!--Edit Below-->
         <div id="page-1" class="page">
             <div class="jumbotron">
 				This is page 1
@@ -120,7 +119,7 @@ Visit [Fullpage-Scroll](https://satvikg7.github.io/Fullpage-Scroll/)
         </div>
     </div>
     <script>
-//Number of pages in your site
+        //Number of pages in your site
         const NoOfPages = n;
         const nop = NoOfPages;
     </script>

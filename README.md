@@ -43,9 +43,6 @@ Visit [Fullpage-Scroll](https://satvikg7.github.io/Fullpage-Scroll/)
 	#page-2 {
  		background-color: ...;
 	}
-      .
-      .
-      .
 	#page-n{
    	 	background-color: ...;
 	}

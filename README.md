@@ -51,6 +51,7 @@ Visit [Fullpage-Scroll](https://satvikg7.github.io/Fullpage-Scroll/)
 	}
 
     /* Navigation */
+    
     .navigation-wrapper {
     color: rgba(15, 34, 136, 0.75);
     display: flex;

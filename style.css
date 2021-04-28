@@ -11,7 +11,6 @@
   width: 100vw;
   display: grid;
   place-items: center;
-  scroll-snap-align: center;
 }
 #page-1 {
   background-color: dodgerblue;

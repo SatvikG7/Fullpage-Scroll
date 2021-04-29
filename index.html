@@ -19,22 +19,7 @@
 </head>
 
 <body>
-    <div class="page-container">
-        <div class="navigation-wrapper">
-            <div class="navigation-btn">
-                <div class="btn-1">
-                    <i class="fas fa-arrow-alt-circle-up fa-3x"></i>
-                </div>
-
-                <div class="currentPage">
-                </div>
-
-                <div class="btn-3">
-                    <i class="fas fa-arrow-alt-circle-down fa-3x"></i>
-                </div>
-            </div>
-        </div>
-
+    <div class="wrapper">
         <div id="page-1" class="page">
             <div class="jumbotron">
                 <h1 class="display-4">Welcome to Fullpage Scroll</h1>
@@ -44,6 +29,7 @@
                 </p>
             </div>
         </div>
+
         <div id="page-2" class="page">
             <div class="jumbotron">
                 <h1 class="display-4">Why use Fullpage Scroll ?</h1>
@@ -52,12 +38,12 @@
                     <hr>
                     Even a person without knowing basics of javascript can use it in less than 5 mins
                 </p>
-
             </div>
         </div>
+
         <div id="page-3" class="page">
             <div class="jumbotron">
-                <h1 class="display-4">How to use?</h1>
+                <h1 class="display-4">How to use Fullpage Scroll?</h1>
                 <p class="lead">
                     Clone my <a href="https://github.com/SatvikG7/Fullpage-Scroll">Github repository</a>
                     <br>
@@ -67,126 +53,180 @@
                 </p>
             </div>
         </div>
+
         <div id="page-4" class="page">
-            <div class="jumbotron">
+            <div class="jumbotron" id="template">
                 <p class="lead">
                 <pre class="language-html">
                     <code>
 &lt;!DOCTYPE html&gt;
+
 &lt;head&gt;
     &lt;meta charset="UTF-8" /&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
     &lt;title&gt;Fullpage Scroll&lt;/title&gt;
+
+    &lt;!-- CSS Stylesheet --&gt;
+    &lt;link rel="stylesheet" href="style.css" /&gt;
+
+    &lt;!-- Font Awesome Icon CDN --&gt;
     &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /&gt;
+
+    &lt;!-- Bootstrap Stylesheet --&gt;
     &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
         integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"&gt;
+    &lt;link rel="stylesheet" href="prism.css"&gt;
+    &lt;script src="prism.js"&gt;&lt;/script&gt;
     &lt;style&gt;
-    * {
-        padding: 0;
-        margin: 0;
-        scroll-behavior: smooth;
-    }
-    ::-webkit-scrollbar {
-        display: none;
-    }
-    .page {
-        height: 100vh;
-        width: 100vw;
-        display: grid;
-        place-items: center;
-    }
-    #page-1 {
-        background-color: ...;
-    }
-    #page-2 {
-        background-color: ...;
-    }
-        .
-        .
-        .
-    #page-n{
-        background-color: ...;
-    }
+        * {
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        .wrapper {
+            height: 100vh;
+            overflow: auto;
+            scroll-snap-type: y mandatory;
+        }
+
+        .page {
+            scroll-snap-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #page-1 {
+            background-color: #de5448;
+        }
+
+        #page-2 {
+            background: #4267b2;
+        }
+
+        #page-3 {
+            background: #4CAF50;
+        }
+
+        #page-4 {
+            background: #d1be15;
+        }
 
         /* Navigation */
-    .navigation-wrapper {
-    color: rgba(15, 34, 136, 0.75);
-    display: flex;
-    flex-direction: row;
-    }
-    .navigation-wrapper>div:hover {
-    color: rgb(33, 8, 56);
-    }
-    .btn-1{
-    position: fixed;
-    left: 35%;
-    right: 65%;
-    bottom: 20px;
-    z-index: 1;
+        .navigation-wrapper {
+            color: rgba(15, 34, 136, 0.75);
+            display: flex;
+            flex-direction: row;
+        }
 
-    }
-    .currentPage {
-    position: fixed;
-    left: 50%;
-    right: 50%;
-    font-size: 30px;
-    font-weight: 700;
-    margin: 0px 15px 5px 15px;
-    bottom: 20px;
-    z-index: 1;
-    }
-    .btn-3{
-    position: fixed;
-    left: 65%;
-    right: 35%;
-    bottom: 20px;
-    z-index: 1;
-    }
+        .navigation-wrapper&gt;div:hover {
+            color: rgb(33, 8, 56);
+        }
+
+        .btn-1 {
+            position: fixed;
+            left: 35%;
+            right: 65%;
+            bottom: 20px;
+            z-index: 1;
+
+        }
+
+        .currentPage {
+            position: fixed;
+            left: 50%;
+            right: 50%;
+            font-size: 30px;
+            font-weight: 700;
+            margin: 0px 15px 5px 15px;
+            bottom: 20px;
+            z-index: 1;
+        }
+
+        .btn-3 {
+            position: fixed;
+            left: 65%;
+            right: 35%;
+            bottom: 20px;
+            z-index: 1;
+        }
+
+        /* Navigation End*/
     &lt;/style&gt;
 &lt;/head&gt;
+
 &lt;body&gt;
-    &lt;div class="page-container"&gt;
-        &lt;div class="navigation-wrapper"&gt;
+    &lt;div class="wrapper"&gt;
+        &lt;div id="page-1" class="page"&gt;
+            &lt;div class="jumbotron"&gt;
+                &lt;h1 class="display-4"&gt;Page 1&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id="page-2" class="page"&gt;
+            &lt;div class="jumbotron"&gt;
+                &lt;h1 class="display-4"&gt;Page 2&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id="page-3" class="page"&gt;
+            &lt;div class="jumbotron"&gt;
+                &lt;h1 class="display-4"&gt;Page 3&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div id="page-4" class="page"&gt;
+            &lt;div class="jumbotron"&gt;
+                &lt;h1 class="display-4"&gt;Page 4&lt;/h1&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="navigation-wrapper"&gt;
+        &lt;div class="navigation-btn"&gt;
             &lt;div class="btn-1"&gt;
                 &lt;i class="fas fa-arrow-alt-circle-up fa-3x"&gt;&lt;/i&gt;
             &lt;/div&gt;
-            &lt;div class="currentPage"&gt;&lt;/div&gt;
+
+            &lt;div class="currentPage"&gt;
+            &lt;/div&gt;
+
             &lt;div class="btn-3"&gt;
                 &lt;i class="fas fa-arrow-alt-circle-down fa-3x"&gt;&lt;/i&gt;
             &lt;/div&gt;
         &lt;/div&gt;
-&lt;!--Edit Below--&gt;
-        &lt;div id="page-1" class="page"&gt;
-            &lt;div class="jumbotron"&gt;
-				This is page 1
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div id="page-2" class="page"&gt;
-            &lt;div class="jumbotron"&gt;
-				This is page 2
-            &lt;/div&gt;
-        &lt;/div&gt;
-		.
-		.
-		.
-		&lt;div id="page-n" class="page"&gt;
-            &lt;div class="jumbotron"&gt;
-				This is page n
-            &lt;/div&gt;
-        &lt;/div&gt;
     &lt;/div&gt;
     &lt;script&gt;
-		//Number of pages in your site
-        const NoOfPages = n;
+        const NoOfPages = 4;
         const nop = NoOfPages;
     &lt;/script&gt;
-	&lt;script src="https://cdn.jsdelivr.net/gh/SatvikG7/Fullpage-Scroll/script.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/gh/SatvikG7/Fullpage-Scroll/script.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-                    </code>
+
+&lt;/html&gt;</code>
                 </pre>
 
                 </p>
+            </div>
+        </div>
+    </div>
+    <div class="navigation-wrapper">
+        <div class="navigation-btn">
+            <div class="btn-1">
+                <i class="fas fa-arrow-alt-circle-up fa-3x"></i>
+            </div>
+
+            <div class="currentPage">
+            </div>
+
+            <div class="btn-3">
+                <i class="fas fa-arrow-alt-circle-down fa-3x"></i>
             </div>
         </div>
     </div>
